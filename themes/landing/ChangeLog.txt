@@ -1,0 +1,14 @@
+Version 1.1
+--------------------------------------------------------------
+February 22, 2019:
+- Added 5 New Demos
+- Added 8 Inner Pages
+- Added Few New Sections
+- Minor HTML Corrections
+etc.
+
+
+Version 1.0
+--------------------------------------------------------------
+February 22, 2019:
+- Template Release
