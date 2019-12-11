@@ -5092,14 +5092,14 @@ input[type="button"].btn-block {
     padding: 0.5rem 0.75rem;
     margin-left: 0;
     line-height: 1.25;
-    color: #4680ff;
+    color: #ffbe2e;
     background-color: #fff;
     border: 0 solid #dee2e6;
 }
 
 .page-link:hover {
     z-index: 2;
-    color: #4680ff;
+    color: #ffbe2e;
     text-decoration: none;
     background-color: #ecf0f5;
     border-color: #dee2e6;
@@ -26715,8 +26715,8 @@ body.box-layout .pcoded-navbar.theme-horizontal ~ .pcoded-header {
 .page-item.active .page-link {
     z-index: 1;
     color: #fff;
-    background-color: #4680ff;
-    border-color: #4680ff;
+    background-color: #ffbe2e;
+    border-color: #ffbe2e;
 }
 
 .page-item.disabled .page-link {
@@ -32679,7 +32679,7 @@ new-task label input[type=checkbox] {
   color: #fff !important;
   text-transform: uppercase;
   text-decoration: none;
-  background: #60a3bc;
+  background: #ffbe2e;
   padding: 10px;
   border-radius: 50px;
   display: inline-block;
