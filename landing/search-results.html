@@ -239,7 +239,7 @@
 		<script src="js/jquery.validate.min.js"></script>
 		<script src="js/jquery.ajaxchimp.min.js"></script>
 		<script src="js/wow.js"></script>
-
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<!-- Custom Script -->
 		<script src="js/custom.js"></script>
 
@@ -247,6 +247,50 @@
 			new WOW().init();
 		</script>
 
+		<script>
+			function getUrlParameter(name) {
+				name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+				var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+				var results = regex.exec(location.search);
+				return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+			};
+
+			$(document).ready(function(){
+				console.log('started')
+				let urlPricerunner = 'http://127.0.0.1:3333/search?query=' + getUrlParameter('query') + '&type=pricerunner';
+				let urlGoogle = 'http://127.0.0.1:3333/search?query=' + getUrlParameter('query') + '&type=google_shopping';
+
+				$.get(urlPricerunner, function(dataPricerunner) {	
+					console.log('Got data from pricerunner...');
+					console.log(dataPricerunner)
+					$.get(urlGoogle, function(dataGoogle){
+						console.log('Got data from Google...');
+						console.log(dataGoogle)
+						let pricerunnerReady = false
+						let googleReady = false
+						// while(pricerunnerReady == false){
+						// 	let urlReadyPricerunner = 'http://127.0.0.1:3333/search/status?id=' + dataPricerunner.job_id;
+						// 	$.get(urlReadyPricerunner, function(tempData){
+						// 		if(data.status == "finished"){
+						// 			pricerunnerReady = true
+						// 			console.log('Pricerunner is ready baby!')
+						// 			console.log(tempData)
+						// 		} else {
+						// 			console.log ('Pricerunner is not ready yet...')
+						// 		}
+						// 	});
+						// }
+
+						// while(googleReady == false){
+
+						// }
+				
+					})
+				})
+			});
+
+			
+		</script>
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
 		<!-- [if lt IE 9]>
 			<script src="js/html5shiv.js" type="text/javascript"></script>
