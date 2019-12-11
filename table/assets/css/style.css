@@ -23704,7 +23704,6 @@ pre[class*=language-]:before {
 }
 
 .pcoded-main-container {
-    background: #ecf0f5;
     position: relative;
     margin: 0 auto;
     padding-top: 0;
@@ -23713,7 +23712,6 @@ pre[class*=language-]:before {
     float: unset;
     right: 0;
     top: 0;
-    margin-left: 230px;
     min-height: 100vh;
     transition: all 0.3s ease-in-out;
 }
