@@ -5092,14 +5092,14 @@ input[type="button"].btn-block {
     padding: 0.5rem 0.75rem;
     margin-left: 0;
     line-height: 1.25;
-    color: #4680ff;
+    color: #ffbe2e;
     background-color: #fff;
     border: 0 solid #dee2e6;
 }
 
 .page-link:hover {
     z-index: 2;
-    color: #4680ff;
+    color: #ffbe2e;
     text-decoration: none;
     background-color: #ecf0f5;
     border-color: #dee2e6;
@@ -20158,7 +20158,7 @@ body {
     font-size: 14px;
     color: #373a3c;
     font-weight: 400;
-    background: #4680ff;
+    background: #ffbe2e;
     position: relative;
 }
 
@@ -23704,7 +23704,6 @@ pre[class*=language-]:before {
 }
 
 .pcoded-main-container {
-    background: #ecf0f5;
     position: relative;
     margin: 0 auto;
     padding-top: 0;
@@ -23713,7 +23712,6 @@ pre[class*=language-]:before {
     float: unset;
     right: 0;
     top: 0;
-    margin-left: 230px;
     min-height: 100vh;
     transition: all 0.3s ease-in-out;
 }
@@ -26717,8 +26715,8 @@ body.box-layout .pcoded-navbar.theme-horizontal ~ .pcoded-header {
 .page-item.active .page-link {
     z-index: 1;
     color: #fff;
-    background-color: #4680ff;
-    border-color: #4680ff;
+    background-color: #ffbe2e;
+    border-color: #ffbe2e;
 }
 
 .page-item.disabled .page-link {
@@ -32666,3 +32664,41 @@ new-task label input[type=checkbox] {
 }
 
 /**====== user card css end ======**/
+
+.pcoded-header {
+  padding:  40px;
+}
+
+#mbpro {
+  height: 230px;
+  width: auto;
+}
+
+.example_b {
+  font-size: 12px;
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffbe2e;
+  padding: 10px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.example_b:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+}
+
+#new_logo {
+  width: 120px;
+  height: 30px;
+}
+
+#headernew {
+  padding-left: 155px;
+}
