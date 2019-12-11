@@ -32664,3 +32664,12 @@ new-task label input[type=checkbox] {
 }
 
 /**====== user card css end ======**/
+
+.pcoded-header {
+  padding:  40px;
+}
+
+.pcoded-main-container img {
+  height: 100px;
+  width: auto;
+}
