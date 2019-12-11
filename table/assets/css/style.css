@@ -32698,3 +32698,7 @@ new-task label input[type=checkbox] {
   width: 120px;
   height: 30px;
 }
+
+#headernew {
+  padding-left: 155px;
+}
