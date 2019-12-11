@@ -178,11 +178,11 @@
 								<p>You can now search for used products, save money, and save the environment</p>
 
 								<!-- Søgefelt -->
-								<form class="newsletter-form">
+								<form class="newsletter-form" action="search-results.html" method="get">
 									<div class="input-group">
-										<input type="email" class="form-control" placeholder="Search and find discounts online and nearby" required="" name="EMAIL">
+										<input type="text" class="form-control" placeholder="Search and find discounts online and nearby" required="" name="query">
 										<span class="input-group-btn">
-											<button class="btn btn-green black-hover" data-target="#exampleModal" >Search</button>
+											<button type="submit" class="btn btn-green black-hover" onClick="console.log('abdalla')" >Search</button>
 										</span>
 									</div>
 								</form>
