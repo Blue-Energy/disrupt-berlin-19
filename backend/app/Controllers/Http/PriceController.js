@@ -6,6 +6,34 @@ const axios = require('axios')
 const token = 'RLDAKPOMBZVQKKYHCHCZSXRQLHTFWOSDLZCWGOWWFIYZUZTXWLCZZGZMYCUCNIPD'
 class PriceController {
 
+    async search_product_and_offers({request, response}){
+        const rules = {
+            query: 'required', // string 
+            type: 'required' // in [pricerunner, google_shopping]
+        }
+
+        const validation = await validate(request.all(), rules)
+
+        if (validation.fails()) {
+            return response.status(422).send({
+                errror: "Failed validation"
+            })
+        }
+
+        let url = 'https://api.priceapi.com/v2/jobs'
+        let data = await axios.post(url, {
+            token: token,
+            source: request.input('type'),
+            country: 'dk',
+            topic: 'product_and_offers',
+            values: request.input('query'),
+            key: 'id'
+        })
+
+        response.send(data.data)
+
+    }
+
     async search({request, response}){
         const rules = {
             query: 'required', // string 
@@ -20,8 +48,6 @@ class PriceController {
             })
         }
 
-        // make request
-        
         let url = 'https://api.priceapi.com/v2/jobs'
         let data = await axios.post(url, {
             token: token,

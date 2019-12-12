@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SVR - Get the best price</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/plugins/dataTables.bootstrap4.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+
+</head>
+<body class="">
+	<!-- [ Pre-loader ] start -->
+	<div class="loader-bg">
+		<div class="loader-track">
+			<div class="loader-fill"></div>
+		</div>
+	</div>
+	<!-- [ Pre-loader ] End -->
+	<!-- [ navigation menu ] start -->
+
+	<!-- [ navigation menu ] end -->
+	<!-- [ Header ] start -->
+	<header class="navbar pcoded-header navbar-expand-lg navbar-light header-blue">
+
+
+				<div class="m-header" id="headernew">
+					<a href="#!" class="b-brand">
+						<!-- ========   change your logo hear   ============ -->
+						<img src="/table/assets/images/SVR-black.png" width="120" height="auto" alt="header-logo">
+						<img src="/table/assets/images/logo-icon.png" alt="" class="logo-thumb">
+					</a>
+
+				</div>
+
+	</header>
+	<!-- [ Header ] end -->
+
+
+
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+    <div class="pcoded-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 grid-item">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+        <!-- [ Main Content ] start -->
+        <div class="row">
+            <!-- customar project  start -->
+            <div class="col-xl-1">
+            </div>
+            <div class="col-xl-10">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row align-items-center m-l-0">
+                            <div class="col-sm-6">
+                            </div>
+
+                        </div>
+                        <div class="table-responsive">
+                            <table id="report-table" class="table mb-0">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Store</th>
+                                        <th>Price</th>
+                                        <th>Price with shipping</th>
+                                        <th>Availability</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-1">
+            </div>
+            <!-- customar project  end -->
+        </div>
+        <!-- [ Main Content ] end -->
+    </div>
+</div>
+<div class="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Doctor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Name">Name</label>
+                                <input type="text" class="form-control" id="Name" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Category">Category</label>
+                                <select class="form-control" id="Category">
+                                    <option value=""></option>
+                                    <option value="1">Kids cloths</option>
+                                    <option value="2">Man cloths</option>
+                                    <option value="3">Man watch</option>
+                                    <option value="3">Office Chairs</option>
+                                    <option value="3">Travel bag</option>
+                                    <option value="3">Woman cloath</option>
+                                    <option value="3">Wooden Chairs</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Price">Price</label>
+                                <input type="text" class="form-control" id="Price" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Quantity">Quantity</label>
+                                <input type="text" class="form-control" id="Quantity" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group fill">
+                                <label class="floating-label" for="Icon">Profie Image</label>
+                                <input type="file" class="form-control" id="Icon" placeholder="sdf">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch4" checked="">
+                                <label class="custom-control-label" for="customSwitch4">Active</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <button class="btn btn-primary">Submit</button>
+                            <button class="btn btn-danger">Clear</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- [ Main Content ] end -->
+    <!-- Warning Section start -->
+    <!-- Older IE warning message -->
+    <!--[if lt IE 11]>
+        <div class="ie-warning">
+            <h1>Warning!!</h1>
+            <p>You are using an outdated version of Internet Explorer, please upgrade
+               <br/>to any of the following web browsers to access this website.
+            </p>
+            <div class="iew-container">
+                <ul class="iew-download">
+                    <li>
+                        <a href="http://www.google.com/chrome/">
+                            <img src="/table/assets/images/browser/chrome.png" alt="Chrome">
+                            <div>Chrome</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.mozilla.org/en-US/firefox/new/">
+                            <img src="/table/assets/images/browser/firefox.png" alt="Firefox">
+                            <div>Firefox</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.opera.com">
+                            <img src="/table/assets/images/browser/opera.png" alt="Opera">
+                            <div>Opera</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.apple.com/safari/">
+                            <img src="/table/assets/images/browser/safari.png" alt="Safari">
+                            <div>Safari</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="assets/images/browser/ie.png" alt="">
+                            <div>IE (11 & above)</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>Sorry for the inconvenience!</p>
+        </div>
+    <![endif]-->
+    <!-- Warning Section Ends -->
+
+    <!-- Required Js -->
+    
+    <script src="/table/assets/js/vendor-all.min.js"></script>
+    <script src="/table/assets/js/plugins/bootstrap.min.js"></script>
+    <script src="/table/assets/js/ripple.js"></script>
+    <script src="/table/assets/js/pcoded.min.js"></script>
+
+
+<script src="/table/assets/js/plugins/jquery.dataTables.min.js"></script>
+<script src="/table/assets/js/plugins/dataTables.bootstrap4.min.js"></script>
+<!-- Apex Chart -->
+<script src="/table/assets/js/plugins/apexcharts.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<script>
+    // Get data
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+	};
+
+    function sleep(milliseconds) {
+        const date = Date.now();
+        let currentDate = null;
+        do {
+            currentDate = Date.now();
+        } while (currentDate - date < milliseconds);
+    }
+
+
+    let product_id = getUrlParameter('product_id')
+    let type = getUrlParameter('type')
+
+    let url = `http://127.0.0.1:3333/search/pao?query=${product_id}&type=${type}`
+
+    $.ajaxSetup({async:false});
+    let responseData = JSON.parse($.get(url).responseText)
+    console.log(responseData)
+    console.log('Got data..')
+    console.log('Checking if download is ready...')
+    
+    let dataReady = false 
+
+    while(dataReady == false){
+        let urlReady = 'http://127.0.0.1:3333/search/status?id=' + responseData.job_id;
+        let response = JSON.parse($.get(urlReady).responseText);
+        console.log(response)
+        if(response.status === "finished"){
+            dataReady = true
+            console.log('Data is ready for download!')
+        }
+        sleep(500)
+    }
+
+    let downloadUrl = 'http://127.0.0.1:3333/search/result?id=' + responseData.job_id;
+    let data = JSON.parse($.get(downloadUrl).responseText);
+    console.log('Here is your data')
+    console.log(data)
+
+    // <th>Product</th>
+    // <th>Store</th>
+    // <th>Price</th>
+    // <th>Price with shipping</th>
+    // <th>Availability</th>
+    // <th>Action</th>
+    data.results[0].content.offers.map(item => {
+
+        var span_class = 'badge badge-success'
+        if(item.availability_text != 'In Stock'){
+            span_class = 'badge badge-danger'
+        }
+        $("#report-table tbody").append(`
+        <tr>
+                                        <td class="align-middle">
+                                            <img src="${data.results[0].content.image_url}" alt="contact-img" title="contact-img" class="rounded mr-3" height="48" />
+                                            <p class="m-0 d-inline-block align-middle font-16">
+                                                <a href="#!" class="text-body">${data.results[0].content.name}</a>
+                                                <br />
+
+                                            </p>
+                                        </td>
+                                        <td class="align-middle">
+                                            ${item.shop_name}
+                                        </td>
+                                        <td class="align-middle">
+                                            ${item.price}
+                                        </td>
+                                        <td class="align-middle">
+                                            ${item.price_with_shipping}
+                                        </td>
+                                        <td class="align-middle">
+                                            <span class="${span_class}">${item.availability_text}</span>
+                                        </td>
+
+                                        <td class="table-action">
+                                            <div class="button_cont" align="center"><a class="example_b" href="${item.url}" target="_blank" rel="nofollow noopener">Show</a></div>
+                                        </td>
+                                    </tr>
+        `)
+    })
+    // DataTable start
+    // $("#report-table tbody").append(`<tr>
+    //                                     <td class="align-middle">
+    //                                         <img src="/table/assets/images/mbpro.png" alt="contact-img" title="contact-img" class="rounded mr-3" height="48" />
+    //                                         <p class="m-0 d-inline-block align-middle font-16">
+    //                                             <a href="#!" class="text-body">Apple MacBook Pro 13-inch</a>
+    //                                             <br />
+
+    //                                         </p>
+    //                                     </td>
+    //                                     <td class="align-middle">
+    //                                         Office Chairs
+    //                                     </td>
+    //                                     <td class="align-middle">
+    //                                         16/12/2019
+    //                                     </td>
+    //                                     <td class="align-middle">
+    //                                         $597.66
+    //                                     </td>
+    //                                     <td class="align-middle">
+    //                                         654
+    //                                     </td>
+    //                                     <td class="align-middle">
+    //                                         <span class="badge badge-success">Active</span>
+    //                                     </td>
+
+    //                                     <td class="table-action">
+    //                                         <div class="button_cont" align="center"><a class="example_b" href="add-website-here" target="_blank" rel="nofollow noopener">Show</a></div>
+    //                                     </td>
+    //                                 </tr>`)
+
+        $('#report-table').DataTable({
+        "lengthMenu": [
+            [5, 10, 25, 50, -1],
+            [5, 10, 25, 50, "All"]
+        ]
+    });                                    
+
+    
+</script>
+
+
+</body>
+
+</html>
