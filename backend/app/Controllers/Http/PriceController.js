@@ -57,7 +57,22 @@ class PriceController {
     }
 
     async result({request, response}){
+        const rules = {
+            id: 'required', // string 
+        }
 
+        const validation = await validate(request.all(), rules)
+
+        if (validation.fails()) {
+            return response.status(422).send({
+                errror: "Failed validation"
+            })
+        }
+
+        let url = 'https://api.priceapi.com/v2/jobs/' + request.input('id') + '/download?token=' + token; 
+        let data = await axios.get(url)
+
+        response.send(data.data)
     }
 }
 

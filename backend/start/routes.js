@@ -22,3 +22,4 @@ Route.get('/', () => {
 
 Route.get('/search', 'PriceController.search')
 Route.get('/search/status', 'PriceController.status')
+Route.get('/search/result', 'PriceController.result')
